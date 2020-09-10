@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waiting room</title>
+</head>
+<body>
+  up,up,down,down,left,right,left,right,b,a
+</body>
+<script>
+  var egg = new Egg();
+  egg
+    .addCode("up,up,down,down,left,right,left,right,b,a", function() {
+      alert('Tu ci hai lasciati.')
+      alert('Allora abbiamo deciso di seguirti.')
+      alert('💸 Hai vinto un buono Amazon. Ritiralo presso i tuoi amici.')
+    })
+    .addHook(function(){
+      console.log("Hook called for: " + this.activeEgg.keys);
+      console.log(this.activeEgg.metadata);
+    })
+    .listen();
+</script>
+</html>
