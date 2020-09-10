@@ -1,7 +1,7 @@
 name: Build and deploy API docs
 on:
   push:
-    branches: [ develop ]
+    branches: [ master ]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
